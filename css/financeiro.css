@@ -1,8 +1,9 @@
 :root {
-  --azul: #0048b4;
+  --azul: #007bff;
+  --azul-escuro: #0056b3;
   --verde: #28a745;
   --vermelho: #dc3545;
-  --cinza: #f7f7f7;
+  --cinza: #f4f6f8;
   --branco: #ffffff;
   --sombra: rgba(0, 0, 0, 0.1);
 }
@@ -13,53 +14,46 @@ body {
   background-color: var(--cinza);
   margin: 0;
   color: #222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* ==== Cabeçalho ==== */
 .topo {
-  background-color: var(--azul);
+  background: var(--azul);
   color: var(--branco);
-  padding: 20px 30px;
+  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 3px 10px var(--sombra);
+  box-shadow: 0 3px 6px var(--sombra);
 }
 
-h1 {
-  margin: 0;
-  font-size: 26px;
+.logo {
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
-/* ==== Botões minimalistas ==== */
-.menu-botoes {
-  display: flex;
-  gap: 10px;
-}
-
-.btn-voltar,
-.btn-sair {
-  background: transparent;
-  border: 2px solid var(--branco);
-  border-radius: 8px;
-  color: var(--branco);
-  font-size: 15px;
-  font-weight: 500;
-  padding: 8px 18px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.btn-voltar:hover,
-.btn-sair:hover {
-  background-color: var(--branco);
+/* ==== Botão Voltar (igual ao prontuário) ==== */
+.btn-voltar {
+  background: var(--branco);
   color: var(--azul);
-  transform: scale(1.05);
+  padding: 8px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-voltar:hover {
+  background: var(--azul-escuro);
+  color: var(--branco);
 }
 
 /* ==== Conteúdo Principal ==== */
 main {
+  flex: 1;
   padding: 30px;
   max-width: 1000px;
   margin: 0 auto;
@@ -77,7 +71,7 @@ main {
 .card {
   background-color: var(--branco);
   border-radius: 15px;
-  box-shadow: 0 4px 10px var(--sombra);
+  box-shadow: 0 4px 15px var(--sombra);
   padding: 20px;
   width: 300px;
   text-align: center;
@@ -108,9 +102,9 @@ table {
   border-collapse: collapse;
   margin-bottom: 40px;
   background-color: var(--branco);
-  border-radius: 12px;
+  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 4px 10px var(--sombra);
+  box-shadow: 0 4px 15px var(--sombra);
 }
 
 th, td {
@@ -134,13 +128,12 @@ tr:hover {
   border-radius: 15px;
   padding: 25px;
   box-shadow: 0 5px 15px var(--sombra);
-  animation: fadeIn 0.4s ease;
 }
 
 .novo-lancamento h2 {
   border-left: 5px solid var(--azul);
   padding-left: 10px;
-  color: #222;
+  color: var(--azul);
   font-size: 22px;
   margin-bottom: 20px;
 }
@@ -174,8 +167,8 @@ input, select {
 input:focus, select:focus {
   border-color: var(--azul);
   outline: none;
-  box-shadow: 0 0 6px rgba(0,72,180,0.25);
   background-color: var(--branco);
+  box-shadow: 0 0 6px rgba(0,72,180,0.25);
 }
 
 button {
@@ -193,13 +186,32 @@ button {
 }
 
 button:hover {
-  background-color: #003b96;
+  background-color: var(--azul-escuro);
   transform: scale(1.03);
   box-shadow: 0 4px 10px rgba(0,72,180,0.25);
 }
 
-/* ==== Animação ==== */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(15px); }
-  to { opacity: 1; transform: translateY(0); }
+/* ==== Rodapé ==== */
+footer {
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.85rem;
+  color: #555;
+  background: var(--branco);
+  border-top: 1px solid #ddd;
+}
+
+/* ==== Responsividade ==== */
+@media (max-width: 600px) {
+  main {
+    padding: 20px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+  }
 }
