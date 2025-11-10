@@ -1,7 +1,7 @@
-/* Estilos Globais */
+
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f4f7f6; /* Cor de fundo suave */
+    background-color: #f4f7f6;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,17 +15,17 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 500px; /* Largura máxima para centralizar o formulário */
+    max-width: 500px; 
 }
 
-/* Estilos do Cabeçalho */
+
 header {
     text-align: center;
     margin-bottom: 30px;
 }
 
 header h1 {
-    color: #007bff; /* Cor primária da clínica (pode mudar) */
+    color: #007bff; 
     font-size: 28px;
     margin-bottom: 5px;
 }
@@ -35,20 +35,20 @@ header p {
     font-size: 16px;
 }
 
-/* Estilos do Formulário */
+
 .appointment-form {
     display: flex;
-    flex-wrap: wrap; /* Permite que os campos de data/hora fiquem lado a lado */
+    flex-wrap: wrap; 
     gap: 20px;
 }
 
 .form-group {
-    width: 100%; /* Por padrão, ocupa a largura total */
+    width: 100%; 
     margin-bottom: 5px;
 }
 
 .half-width {
-    width: calc(50% - 10px); /* Para campos que devem ficar lado a lado */
+    width: calc(50% - 10px); 
 }
 
 label {
@@ -69,7 +69,7 @@ textarea {
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+    box-sizing: border-box; 
     font-size: 16px;
     transition: border-color 0.3s;
 }
@@ -86,11 +86,11 @@ textarea {
     resize: vertical;
 }
 
-/* Estilo do Botão */
+
 .btn-submit {
     width: 100%;
     padding: 15px;
-    background-color: #007bff; /* Cor primária */
+    background-color: #007bff; 
     color: white;
     border: none;
     border-radius: 5px;
@@ -102,10 +102,10 @@ textarea {
 }
 
 .btn-submit:hover {
-    background-color: #0056b3; /* Cor mais escura no hover */
+    background-color: #0056b3; 
 }
 
-/* Media Query para Responsividade em telas menores */
+
 @media (max-width: 600px) {
     .container {
         margin: 20px;
@@ -114,6 +114,6 @@ textarea {
 
     .form-group,
     .half-width {
-        width: 100%; /* Todos os campos ocupam a largura total em telas pequenas */
+        width: 100%; 
     }
 }
