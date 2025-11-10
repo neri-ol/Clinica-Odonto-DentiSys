@@ -1,117 +1,174 @@
 :root {
   --azul: #0048b4;
   --verde: #28a745;
-  --amarelo: #ffc107;
-  --cinza: #f5f6fa;
-  --texto: #222;
-  --borda: #ddd;
+  --vermelho: #dc3545;
+  --cinza: #f7f7f7;
+  --branco: #ffffff;
+  --sombra: rgba(0, 0, 0, 0.1);
 }
 
+/* ==== Estrutura Geral ==== */
 body {
-  background-color: var(--branco, #fff);
-  color: var(--texto);
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--cinza);
   margin: 0;
-  padding: 0 20px;
+  color: #222;
 }
 
-/* ==== Cabeçalho ==== */
 header {
   background-color: var(--azul);
-  color: white;
+  color: var(--branco);
   padding: 20px;
   text-align: center;
-  border-radius: 0 0 10px 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 
 h1 {
   margin: 0;
   font-size: 26px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
-/* ==== Conteúdo ==== */
 main {
-  margin: 30px auto;
+  padding: 30px;
   max-width: 1000px;
+  margin: 0 auto;
 }
 
-/* ==== Cards ==== */
+/* ==== Cartões de Resumo ==== */
 .resumo {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  margin-bottom: 25px;
   justify-content: center;
+  margin-bottom: 40px;
 }
 
 .card {
-  background-color: var(--cinza);
-  border-left: 6px solid var(--azul);
-  border-radius: 10px;
+  background-color: var(--branco);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px var(--sombra);
   padding: 20px;
-  flex: 1;
-  min-width: 220px;
+  width: 300px;
   text-align: center;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-}
-
-.card h2 {
-  font-size: 16px;
-  margin-bottom: 8px;
+  transform: translateY(-5px);
 }
 
 .valor {
   font-size: 22px;
   font-weight: bold;
+  margin-top: 10px;
 }
 
-.receita { color: var(--verde); }
-.despesa { color: #e74c3c; }
+.receita {
+  color: var(--verde);
+}
+
+.despesa {
+  color: var(--vermelho);
+}
 
 /* ==== Tabela ==== */
 table {
   width: 100%;
   border-collapse: collapse;
-  background-color: var(--cinza);
-  border-radius: 10px;
+  margin-bottom: 40px;
+  background-color: var(--branco);
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px var(--sombra);
 }
 
 th, td {
-  padding: 12px;
+  padding: 14px;
   text-align: left;
-  border-bottom: 1px solid var(--borda);
+  border-bottom: 1px solid #ddd;
 }
 
 th {
   background-color: var(--azul);
-  color: white;
-  text-transform: uppercase;
-  font-size: 13px;
+  color: var(--branco);
 }
 
 tr:hover {
-  background-color: #eef3ff;
+  background-color: #f1f5ff;
 }
 
-/* ==== Formulário ==== */
-form {
-  background-color: var(--cinza);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+/* ==== Novo Lançamento ==== */
+.novo-lancamento {
+  background-color: var(--branco);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 15px var(--sombra);
+  animation: fadeIn 0.4s ease;
+}
+
+.novo-lancamento h2 {
+  border-left: 5px solid var(--azul);
+  padding-left: 10px;
+  color: #222;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
 }
 
 label {
-  display: block;
-  margin-top: 10px;
   font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+input, select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.2s;
+  background-color: var(--cinza);
+}
+
+input:focus, select:focus {
+  border-color: var(--azul);
+  outline: none;
+  box-shadow: 0 0 6px rgba(0,72,180,0.25);
+  background-color: var(--branco);
+}
+
+button {
+  background-color: var(--azul);
+  color: var(--branco);
+  border: none;
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin-top: 25px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #0056d4;
+  transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0,72,180,0.25);
+}
+
+/* Animação */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
 }
