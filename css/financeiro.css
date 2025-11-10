@@ -1,5 +1,5 @@
 :root {
-  --azul: #007bff;
+  --azul: #0048b4;
   --verde: #28a745;
   --vermelho: #dc3545;
   --cinza: #f7f7f7;
@@ -9,32 +9,63 @@
 
 /* ==== Estrutura Geral ==== */
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-color: var(--cinza);
   margin: 0;
   color: #222;
 }
 
-header {
+/* ==== Cabeçalho ==== */
+.topo {
   background-color: var(--azul);
   color: var(--branco);
-  padding: 20px;
-  text-align: center;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 10px var(--sombra);
 }
 
 h1 {
   margin: 0;
   font-size: 26px;
-  letter-spacing: 0.5px;
+  font-weight: 600;
 }
 
+/* ==== Botões minimalistas ==== */
+.menu-botoes {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-voltar,
+.btn-sair {
+  background: transparent;
+  border: 2px solid var(--branco);
+  border-radius: 8px;
+  color: var(--branco);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-voltar:hover,
+.btn-sair:hover {
+  background-color: var(--branco);
+  color: var(--azul);
+  transform: scale(1.05);
+}
+
+/* ==== Conteúdo Principal ==== */
 main {
   padding: 30px;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-/* ==== Cartões de Resumo ==== */
+/* ==== Cards de Resumo ==== */
 .resumo {
   display: flex;
   gap: 20px;
@@ -94,7 +125,7 @@ th {
 }
 
 tr:hover {
-  background-color: #f1f5ff;
+  background-color: #eef4ff;
 }
 
 /* ==== Novo Lançamento ==== */
@@ -162,12 +193,12 @@ button {
 }
 
 button:hover {
-  background-color: #0056d4;
+  background-color: #003b96;
   transform: scale(1.03);
   box-shadow: 0 4px 10px rgba(0,72,180,0.25);
 }
 
-/* Animação */
+/* ==== Animação ==== */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(15px); }
   to { opacity: 1; transform: translateY(0); }
