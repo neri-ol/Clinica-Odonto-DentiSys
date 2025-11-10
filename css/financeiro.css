@@ -1,5 +1,5 @@
 :root {
-  --azul: #0048b4;   /* Azul mais escuro e vibrante, dá mais destaque à logo */
+  --azul: #0048b4;
   --verde: #28a745;
   --amarelo: #ffc107;
   --branco: #ffffff;
@@ -30,7 +30,7 @@ main {
   margin-top: 20px;
 }
 
-/* ==== Cards de resumo ==== */
+
 .resumo {
   display: flex;
   gap: 20px;
@@ -60,7 +60,7 @@ main {
 .receita { color: var(--verde); }
 .despesa { color: var(--amarelo); }
 
-/* ==== Tabela ==== */
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -77,7 +77,7 @@ th {
   background-color: #1f1f1f;
 }
 
-/* ==== Formulário ==== */
+
 form {
   background-color: #1e1e1e;
   padding: 15px;
