@@ -1,50 +1,65 @@
 :root {
-  --azul: #0048b4;   /* Azul mais escuro e vibrante, dá mais destaque à logo */
+  --azul: #0048b4;
   --verde: #28a745;
   --amarelo: #ffc107;
-  --branco: #ffffff;
+  --cinza: #f5f6fa;
+  --texto: #222;
+  --borda: #ddd;
 }
 
 body {
-  background-color: #121212;
-  color: var(--branco);
-  font-family: Arial, sans-serif;
+  background-color: var(--branco, #fff);
+  color: var(--texto);
+  font-family: "Segoe UI", Arial, sans-serif;
   margin: 0;
-  padding: 20px;
+  padding: 0 20px;
 }
 
+/* ==== Cabeçalho ==== */
 header {
   background-color: var(--azul);
-  color: var(--branco);
-  padding: 15px;
+  color: white;
+  padding: 20px;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 
 h1 {
   margin: 0;
-  font-size: 24px;
+  font-size: 26px;
+  letter-spacing: 1px;
 }
 
+/* ==== Conteúdo ==== */
 main {
-  margin-top: 20px;
+  margin: 30px auto;
+  max-width: 1000px;
 }
 
-/* ==== Cards de resumo ==== */
+/* ==== Cards ==== */
 .resumo {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  justify-content: center;
 }
 
 .card {
-  background-color: #1e1e1e;
+  background-color: var(--cinza);
   border-left: 6px solid var(--azul);
-  border-radius: 8px;
-  padding: 15px;
+  border-radius: 10px;
+  padding: 20px;
   flex: 1;
-  min-width: 200px;
+  min-width: 220px;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
 }
 
 .card h2 {
@@ -58,57 +73,45 @@ main {
 }
 
 .receita { color: var(--verde); }
-.despesa { color: var(--amarelo); }
+.despesa { color: #e74c3c; }
 
 /* ==== Tabela ==== */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 20px;
+  background-color: var(--cinza);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
 th, td {
   padding: 12px;
   text-align: left;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid var(--borda);
 }
 
 th {
-  background-color: #1f1f1f;
+  background-color: var(--azul);
+  color: white;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+tr:hover {
+  background-color: #eef3ff;
 }
 
 /* ==== Formulário ==== */
 form {
-  background-color: #1e1e1e;
-  padding: 15px;
-  border-radius: 8px;
+  background-color: var(--cinza);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
 label {
   display: block;
   margin-top: 10px;
-  margin-bottom: 5px;
-}
-
-input, select {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #333;
-  border-radius: 4px;
-  background-color: #262626;
-  color: var(--branco);
-}
-
-button {
-  background-color: var(--azul);
-  color: var(--branco);
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  margin-top: 15px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
+  font-weight: 600;
 }
