@@ -1,9 +1,7 @@
-/* ===================
-   Estilo Ficha de Prontuário DentiSys
-   =================== */
+
 :root {
   --azul: #007bff;
-  --azul-escuro: #0056b3;
+  --azul-escuro: #007bff;
   --cinza-claro: #f4f6f8;
   --branco: #ffffff;
   --sombra: rgba(0, 0, 0, 0.1);
