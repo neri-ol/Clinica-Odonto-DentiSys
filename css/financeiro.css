@@ -1,5 +1,5 @@
 :root {
-  --azul: #0048b4;   /* Azul mais escuro e vibrante, dá mais destaque à logo */
+  --azul: #007bff;   
   --verde: #28a745;
   --vermelho: #dc3545;
   --cinza: #f4f6f8;
@@ -34,7 +34,7 @@ body {
   font-weight: 600;
 }
 
-/* ==== Botão Voltar (igual ao prontuário) ==== */
+/* ==== Botão Voltar ==== */
 .btn-voltar {
   background: var(--branco);
   color: var(--azul);
@@ -46,7 +46,7 @@ body {
 }
 
 .btn-voltar:hover {
-  background: var(--azul-escuro);
+  background: var(--azul);
   color: var(--branco);
 }
 
@@ -58,7 +58,7 @@ main {
   margin: 0 auto;
 }
 
-/* ==== Cards de resumo ==== */
+/* ==== Cards de Resumo ==== */
 .resumo {
   display: flex;
   gap: 20px;
@@ -95,7 +95,7 @@ main {
   color: var(--vermelho);
 }
 
-
+/* ==== Tabela ==== */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -121,49 +121,93 @@ tr:hover {
   background-color: #eef4ff;
 }
 
-/* ==== Formulário ==== */
-form {
-  background-color: #1e1e1e;
-  padding: 15px;
-  border-radius: 8px;
+/* ==== NOVO FORMULÁRIO DE LANÇAMENTO ==== */
+.novo-lancamento {
+  background-color: var(--branco);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px var(--sombra);
+  border: 1px solid #ddd;
+  margin-top: 40px;
+}
+
+.novo-lancamento h2 {
+  color: var(--azul);
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 25px;
+  border-bottom: 3px solid var(--azul);
+  display: inline-block;
+  padding-bottom: 5px;
+  width: 100%;
+}
+
+.novo-lancamento form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
 }
 
 label {
   font-weight: 600;
-  margin-bottom: 6px;
   color: #333;
+  margin-bottom: 6px;
 }
 
 input, select {
-  padding: 12px;
+  padding: 14px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 10px;
   font-size: 15px;
-  transition: 0.2s;
-  background-color: var(--cinza);
+  transition: 0.3s;
+  background-color: #f8faff;
 }
 
 input:focus, select:focus {
   border-color: var(--azul);
-  outline: none;
   background-color: var(--branco);
-  box-shadow: 0 0 6px rgba(0,72,180,0.25);
+  box-shadow: 0 0 8px rgba(0,72,180,0.25);
+  outline: none;
 }
 
 button {
-  background-color: var(--azul);
+  background: linear-gradient(135deg, var(--azul), #005fe0);
   color: var(--branco);
   border: none;
   padding: 14px 18px;
   border-radius: 10px;
-  margin-top: 25px;
-  cursor: pointer;
-  width: 100%;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: bold;
+  cursor: pointer;
+  width: 250px;
+  margin: 20px auto 0;
+  display: block;
   transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0,72,180,0.25);
 }
 
 button:hover {
-  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,72,180,0.3);
+}
+
+/* ==== Rodapé ==== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--azul);
+  color: var(--branco);
+  margin-top: 40px;
+  box-shadow: 0 -3px 6px var(--sombra);
 }

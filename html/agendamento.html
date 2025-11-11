@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendamento de Consulta - Clínica</title>
+    <title>Agendamento de Consulta - Clínica Odontológica</title>
     <link rel="stylesheet" href="../css/agendamento.css">
 </head>
 <body>
     <div class="container">
         <header>
             <h1>Agendar Sua Consulta</h1>
-            <p>Preencha os dados abaixo para solicitar seu horário na clínica.</p>
+            <p>Preencha os dados abaixo para solicitar seu horário na clínica odontológica.</p>
         </header>
 
         <form class="appointment-form" action="#" method="POST">
@@ -34,11 +34,14 @@
                 <label for="especialidade">Especialidade Desejada</label>
                 <select id="especialidade" name="especialidade" required>
                     <option value="" disabled selected>Selecione uma especialidade</option>
-                    <option value="cardiologia">Cardiologia</option>
-                    <option value="dermatologia">Dermatologia</option>
-                    <option value="ortopedia">Ortopedia</option>
-                    <option value="pediatria">Pediatria</option>
-                    <option value="outra">Outra</option>
+                    <option value="clinico-geral">Clínico Geral</option>
+                    <option value="ortodontia">Ortodontia (Aparelhos)</option>
+                    <option value="endodontia">Endodontia (Canal)</option>
+                    <option value="periodontia">Periodontia (Gengiva)</option>
+                    <option value="implantodontia">Implantodontia (Implantes)</option>
+                    <option value="odontopediatria">Odontopediatria (Crianças)</option>
+                    <option value="estetica">Dentística / Estética Dental</option>
+                    <option value="proteses">Próteses Dentárias</option>
                 </select>
             </div>
 
@@ -54,7 +57,7 @@
 
             <div class="form-group">
                 <label for="observacoes">Observações (Opcional)</label>
-                <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+                <textarea id="observacoes" name="observacoes" rows="4" placeholder="Ex: Dor de dente, avaliação estética, limpeza..."></textarea>
             </div>
             
             <button type="submit" class="btn-submit">Confirmar Agendamento</button>
