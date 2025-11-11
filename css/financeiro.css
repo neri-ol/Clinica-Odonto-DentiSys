@@ -1,6 +1,5 @@
 :root {
-  --azul: #007bff;
-  --azul-escuro: #0056b3;
+  --azul: #0048b4;   /* Azul mais escuro e vibrante, dá mais destaque à logo */
   --verde: #28a745;
   --vermelho: #dc3545;
   --cinza: #f4f6f8;
@@ -59,7 +58,7 @@ main {
   margin: 0 auto;
 }
 
-/* ==== Cards de Resumo ==== */
+/* ==== Cards de resumo ==== */
 .resumo {
   display: flex;
   gap: 20px;
@@ -96,7 +95,7 @@ main {
   color: var(--vermelho);
 }
 
-/* ==== Tabela ==== */
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -122,31 +121,11 @@ tr:hover {
   background-color: #eef4ff;
 }
 
-/* ==== Novo Lançamento ==== */
-.novo-lancamento {
-  background-color: var(--branco);
-  border-radius: 15px;
-  padding: 25px;
-  box-shadow: 0 5px 15px var(--sombra);
-}
-
-.novo-lancamento h2 {
-  border-left: 5px solid var(--azul);
-  padding-left: 10px;
-  color: var(--azul);
-  font-size: 22px;
-  margin-bottom: 20px;
-}
-
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
+/* ==== Formulário ==== */
+form {
+  background-color: #1e1e1e;
+  padding: 15px;
+  border-radius: 8px;
 }
 
 label {
@@ -186,32 +165,5 @@ button {
 }
 
 button:hover {
-  background-color: var(--azul-escuro);
-  transform: scale(1.03);
-  box-shadow: 0 4px 10px rgba(0,72,180,0.25);
-}
-
-/* ==== Rodapé ==== */
-footer {
-  text-align: center;
-  padding: 15px 0;
-  font-size: 0.85rem;
-  color: #555;
-  background: var(--branco);
-  border-top: 1px solid #ddd;
-}
-
-/* ==== Responsividade ==== */
-@media (max-width: 600px) {
-  main {
-    padding: 20px;
-  }
-
-  .card {
-    width: 100%;
-  }
-
-  button {
-    width: 100%;
-  }
+  background-color: #0056b3;
 }
